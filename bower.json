@@ -1,0 +1,41 @@
+{
+  "name": "suitjs/reel",
+  "homepage": "https://github.com/suitjs/reel",
+  "authors": [
+    "Eduardo Dias da Costa <eduardo@thelaborat.org>",
+	"Gustavo Allebrandt <gustavoallebrandt@gmail.com>",
+  ],
+  "description": "Animate your work playing a reel.",
+  "main": ["deploy/js/reel.js"],
+  "moduleType": [],
+  "keywords": [
+	"front-end",
+    "haxe",
+	"typescript",
+	"javascript",
+	"framework",
+    "suitjs",
+	"servant",	
+    "requestAnimationFrame",
+	"tween",
+	"lerp",
+	"animation",
+  ],
+  
+  "ignore": [	
+	"**/.*",
+	"old/",
+	"node_modules/",
+	"bower_components/",
+	"source/",	
+	"*.hxproj",
+	"test.html",	
+	"README.md",
+	"bower.json",
+	"haxelib.json",
+	"LICENSE"	
+  ],
+
+  "license": "MIT",
+  "private": true
+}

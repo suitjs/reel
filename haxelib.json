@@ -1,0 +1,15 @@
+{
+  "name": "reelhx",
+  "url": "https://github.com/suitjs/reel",
+  "license": "MIT",
+  "tags": ["javascript","tween","animation","transitions"],
+  "description": "Animate your work playing a reel.",
+  "version": "1.0.0",
+  "releasenotes": "1.0.0",
+  "classPath": "haxe/",
+  "contributors": ["eduardo-costa"],
+  "dependencies": 
+  {
+	
+  }
+}
