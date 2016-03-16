@@ -3,10 +3,10 @@
   "homepage": "https://github.com/suitjs/reel",
   "authors": [
     "Eduardo Dias da Costa <eduardo@thelaborat.org>",
-	"Gustavo Allebrandt <gustavoallebrandt@gmail.com>",
+	"Gustavo Allebrandt <gustavoallebrandt@gmail.com>"
   ],
   "description": "Animate your work playing a reel.",
-  "main": ["deploy/js/reel.js"],
+  "main": ["js/reel.js"],
   "moduleType": [],
   "keywords": [
 	"front-end",
@@ -19,7 +19,7 @@
     "requestAnimationFrame",
 	"tween",
 	"lerp",
-	"animation",
+	"animation"
   ],
   
   "ignore": [	

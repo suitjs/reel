@@ -1,0 +1,44 @@
+{
+	"tags": {
+		"allowUnknownTags" : true
+	},
+    
+	"plugins": ["plugins/markdown"],
+	"templates": {
+        "applicationName": "SuitJS - Reel",
+        "navigationImage": "http://www.suitjs.com/public/images/logo-64.png",
+		"cleverLinks":      true,
+		"monospaceLinks":   true,
+        "linenums":         true,
+		"disqus":           "suitjs",
+		"googleAnalytics":  "UA-75143185-1",        
+        
+		"default": {
+			"outputSourceFiles" : true
+		},
+        
+		"openGraph": {
+			"title":        "SuitJS - Reel",
+			"type":         "website",
+			"image":        "http://www.suitjs.com/public/images/logo-suitjs.svg?v=2",
+			"site_name":    "SuitJS - Reel",
+			"url":          "http://suitjs.com/docs/reel/"
+		},
+        
+		"meta": {
+			"title":        "SuitJS - Reel",
+			"description":  "Animate your work by playing a reel!",
+			"keyword":      "javascript,framework,mvc,suitjs,haxe,typescript,servant,requestAnimationFrame,update,frontend"                
+		},
+        
+        "link":{
+            "favicon": "http://suitjs.com/favicon.png"
+        }
+        
+	},
+	"markdown": {
+		"parser":   "gfm",
+		"hardwrap": true,
+		"tags":     ["examples"]
+	}
+}

@@ -1,8 +1,10 @@
 /**
-Class that implements the animation/tweening features of SuitJS.
-//*/
-var Reel =
-function(window,document,body) {
+* Class that implements the animation/tweening features of SuitJS.
+* @class
+* @type Reel
+*/
+var Reel;
+(function(window,document,body) {
 
 	"use strict";
 
@@ -20,16 +22,21 @@ function(window,document,body) {
 	//*/
 	var m_defaultDuration = 0.3;
 
-	/**
-	Default easing.
-	//*/
+	//Default easing.
 	var m_easingLinear  = function easingLinear(r) { return r; };
 	var m_defaultEasing = m_easingLinear;
 
-	/**
-	Adds an Animation to the execution loop.
-	//*/
-	var m_add =
+    /**
+     * Adds an Animation to the execution loop.
+	 * @param  {Object} p_target
+	 * @param  {String} p_property
+	 * @param  {Object} p_value
+	 * @param  {?Number} p_duration
+	 * @param  {?Number} p_delay
+	 * @param  {?Easing} p_easing
+	 * @param  {?Boolean} p_run_on_background
+	 */    
+	var m_add =	
 	function add(p_target,p_property,p_value,p_duration,p_delay,p_easing,p_run_on_background) {  
 
 		var a 		   = Servant;		
@@ -205,4 +212,4 @@ function(window,document,body) {
 		stop:            m_stop,
 	};
 
-}(window,document,document.body);
+})(window,document,document.body);
