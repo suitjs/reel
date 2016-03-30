@@ -389,7 +389,7 @@
     </ul>
 </div>
     <div class="main">
-        <h1 class="page-title" data-filename="global.html">Global</h1>
+        <h1 class="page-title" data-filename="Bounce.html">Class: Bounce</h1>
         
 
 
@@ -398,7 +398,7 @@
     
 <header>
     <h2>
-    
+    Bounce
     </h2>
     
 </header>  
@@ -409,115 +409,16 @@
     
     
         
-        
-        
-<dl class="details">
-    
-        
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-        
-        
-    
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-        <h3 class="subsection-title">Members</h3>
-        
-        <dl>
-            
 <dt>
     <div class="nameContainer">
-        <h4 class="name" id="PI2">PI2</h4>
-    </div>
-    
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Easing Equations by Robert Penner [http://robertpenner.com/easing/]</p>
-    </div>
-    
-    
-    
-<dl class="details">
-    
-        
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-</dd>
-
-        </dl>
-    
-    
-    
-    
-    
-        <h3 class="subsection-title">Type Definitions</h3>
-        
-        <dl>
-                
-<dt>
-    <div class="nameContainer">
-        <h4 class="name" id="Easing">
+        <h4 class="name" id="Bounce">
             
-            Easing<span class="signature">(p_progress)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Number}</span>
+            new Bounce<span class="signature">()</span>
         </h4>
     
         
         <div class="tag-source">
-            <a href="g__development_project_web_thelab_suitjs_reel_js_reel.doc.js.html">js/reel.doc.js</a>, <a href="g__development_project_web_thelab_suitjs_reel_js_reel.doc.js.html#line26">line 26</a>
+            <a href="g__development_project_web_thelab_suitjs_reel_js_reel.doc.js.html">js/reel.doc.js</a>, <a href="g__development_project_web_thelab_suitjs_reel_js_reel.doc.js.html#line627">line 627</a>
         </div>
         
     </div>
@@ -528,7 +429,7 @@
     
     
     <div class="description">
-        <p>Function that transforms the animation progress and eases the rate of change of the animated value.</p>
+        <p>Bounce easings.</p>
     </div>
     
 
@@ -536,51 +437,6 @@
     
     
     
-    
-        
-
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
-	<tbody>
-	
-	
-        <tr>
-            
-                <td class="name"><code>p_progress</code></td>
-            
-            
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-            
-            
-            
-            <td class="description last">
-                
-                <p>Animation progress inside the range <code>[0.0,1.0]</code>.</p></td>
-        </tr>
-	
-	
-	</tbody>
-</table>
     
     
     
@@ -618,415 +474,62 @@
     
     
     
-    <h5>Returns:</h5>
-    
-
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            
-            <td class="type">
-            
-                        Number
-                        
-                    
-            </td>
-            <td class="description last"><ul>
-<li>Returns the mapped progress inside the range <code>[0.0,1.0]</code>.</li>
-</ul></td>
-        </tr>
-    
-    </tbody>
-</table>
-
-    
     
     
 </dd>
 
-            
-                
-<dt>
-    <div class="nameContainer">
-        <h4 class="name" id="ReelAnimation">ReelAnimation<span class="type-signature type object">Object</span> </h4>
+    
     </div>
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        <h3 class="subsection-title">Methods</h3>
+        
+        <dl>
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id=".in">
+            
+            <span class="type-signature static">static</span>Bounce.in<span class="signature">()</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            <a href="g__development_project_web_thelab_suitjs_reel_js_reel.doc.js.html">js/reel.doc.js</a>, <a href="g__development_project_web_thelab_suitjs_reel_js_reel.doc.js.html#line635">line 635</a>
+        </div>
+        
+    </div>
+
     
 </dt>
 <dd>
     
+    
     <div class="description">
-        <p>Animation node.</p>
+        <p>Bounce In.<br>Formula<br><code>return 1.0 - Bounce.out(1.0-x);</code></p>
     </div>
+    
+
+    
+    
+    
+    
     
     
     
 <dl class="details">
-    
-        
-        <h5 class="subsection-title">Properties:</h5>
-        
-        <dl>
-
-<table class="props">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		<th>Argument</th>
-		
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
-	<tbody>
-	
-	
-        <tr>
-            
-                <td class="name"><code>target</code></td>
-            
-            
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-            
-            
-                <td class="attributes">
-                
-                    
-                
-                </td>
-            
-            
-            
-            
-            <td class="description last"><p>Target object being animated.</p></td>
-        </tr>
-	
-	
-	
-        <tr>
-            
-                <td class="name"><code>property</code></td>
-            
-            
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-            
-            
-                <td class="attributes">
-                
-                    
-                
-                </td>
-            
-            
-            
-            
-            <td class="description last"><p>Property name.</p></td>
-        </tr>
-	
-	
-	
-        <tr>
-            
-                <td class="name"><code>value</code></td>
-            
-            
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-            
-            
-                <td class="attributes">
-                
-                    
-                
-                </td>
-            
-            
-            
-            
-            <td class="description last"><p>Final value.</p></td>
-        </tr>
-	
-	
-	
-        <tr>
-            
-                <td class="name"><code>easing</code></td>
-            
-            
-            <td class="type">
-            
-                
-<span class="param-type"><a href="global.html#Easing">Easing</a></span>
-
-
-            
-            </td>
-            
-            
-                <td class="attributes">
-                
-                    
-                
-                </td>
-            
-            
-            
-            
-            <td class="description last"><p>Animation easing.</p></td>
-        </tr>
-	
-	
-	
-        <tr>
-            
-                <td class="name"><code>delay</code></td>
-            
-            
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-            
-            
-                <td class="attributes">
-                
-                    
-                
-                </td>
-            
-            
-            
-            
-            <td class="description last"><p>Delay in seconds.</p></td>
-        </tr>
-	
-	
-	
-        <tr>
-            
-                <td class="name"><code>duration</code></td>
-            
-            
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-            
-            
-                <td class="attributes">
-                
-                    
-                
-                </td>
-            
-            
-            
-            
-            <td class="description last"><p>Duration in seconds.</p></td>
-        </tr>
-	
-	
-	
-        <tr>
-            
-                <td class="name"><code>elapsed</code></td>
-            
-            
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-            
-            
-                <td class="attributes">
-                
-                    
-                
-                </td>
-            
-            
-            
-            
-            <td class="description last"><p>Elapsed time of execution in seconds.</p></td>
-        </tr>
-	
-	
-	
-        <tr>
-            
-                <td class="name"><code>progress</code></td>
-            
-            
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-            
-            
-                <td class="attributes">
-                
-                    
-                
-                </td>
-            
-            
-            
-            
-            <td class="description last"><p>Animation progress in the range <code>[0.0,1.0]</code>.</p></td>
-        </tr>
-	
-	
-	
-        <tr>
-            
-                <td class="name"><code>oncomplete</code></td>
-            
-            
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-|
-
-<span class="param-type">function</span>
-
-
-            
-            </td>
-            
-            
-                <td class="attributes">
-                
-                    
-                
-                    &lt;nullable><br>
-                
-                </td>
-            
-            
-            
-            
-            <td class="description last"><p>On complete callback. Can be either a function or <code>Suit</code>notification string.</p></td>
-        </tr>
-	
-	
-	
-        <tr>
-            
-                <td class="name"><code>runOnBackground</code></td>
-            
-            
-            <td class="type">
-            
-                
-<span class="param-type">Boolean</span>
-
-
-            
-            </td>
-            
-            
-                <td class="attributes">
-                
-                    
-                
-                    &lt;nullable><br>
-                
-                </td>
-            
-            
-            
-            
-            <td class="description last"><p>Flag that indicates this node will keep running when the tab isn't focused.</p></td>
-        </tr>
-	
-	
-	
-        <tr>
-            
-                <td class="name"><code>update()</code></td>
-            
-            
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-            
-            
-                <td class="attributes">
-                
-                    
-                
-                </td>
-            
-            
-            
-            
-            <td class="description last"><p>Execution method.</p></td>
-        </tr>
-	
-	
-	</tbody>
-</table></dl>
-        
     
         
     
@@ -1052,9 +555,169 @@
 
     
     
+
+    
+
+    
+    
+    
+    
+    
+    
+    
 </dd>
 
-            </dl>
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id=".inout">
+            
+            <span class="type-signature static">static</span>Bounce.inout<span class="signature">()</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            <a href="g__development_project_web_thelab_suitjs_reel_js_reel.doc.js.html">js/reel.doc.js</a>, <a href="g__development_project_web_thelab_suitjs_reel_js_reel.doc.js.html#line662">line 662</a>
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Bounce In-Out<br>Formula</p>
+<pre class="prettyprint source"><code> if (x &lt; 0.5) return Bounce.in(x*2) * 0.5;
+    return (Bounce.out((x*2.0)-1.0) * 0.5) + 0.5;</code></pre>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id=".out">
+            
+            <span class="type-signature static">static</span>Bounce.out<span class="signature">()</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            <a href="g__development_project_web_thelab_suitjs_reel_js_reel.doc.js.html">js/reel.doc.js</a>, <a href="g__development_project_web_thelab_suitjs_reel_js_reel.doc.js.html#line647">line 647</a>
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Bounce Out.<br>Formula</p>
+<pre class="prettyprint source"><code> if (x &lt; 0.363636) return (7.5625*x*x); else 
+ if (x &lt; 0.727272) return ((7.5625*(x-=0.545454)*x) + 0.75); else 
+ if (x &lt; 0.909090) return ((7.5625*(x-=0.818181)*x) + 0.9375); else            
+    return ((7.5625*(x-=0.954545)*x) + 0.984375);</code></pre>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        </dl>
+    
+    
     
     
     

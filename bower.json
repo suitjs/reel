@@ -1,5 +1,5 @@
 {
-  "name": "suitjs/reel",
+  "name": "suitjs-reel",
   "homepage": "https://github.com/suitjs/reel",
   "authors": [
     "Eduardo Dias da Costa <eduardo@thelaborat.org>",
@@ -24,18 +24,20 @@
   
   "ignore": [	
 	"**/.*",
-	"old/",
+    "docs/",
+    "haxe/",
+    "typescript/",	
 	"node_modules/",
 	"bower_components/",
-	"source/",	
-	"*.hxproj",
-	"test.html",	
+	"source/",
+    "LICENSE.md",	
 	"README.md",
-	"bower.json",
-	"haxelib.json",
-	"LICENSE"	
+	"*.json",
+    "*.bat",
+    "*.sh",	
+    "*.hxproj",
+    "*.hxml"		
   ],
 
-  "license": "MIT",
-  "private": true
+  "license": "MIT"  
 }

@@ -1,0 +1,29 @@
+{
+  "name": "suitjs-reel",
+  "version": "1.0.0",
+  "description": "Animate your work by playing a reel!", 
+  
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suitjs/reel"
+  },
+  "author": "Eduardo Dias da Costa  <eduardo@thelaborat.org> https://github.com/eduardo-costa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/suitjs/reel/issues"
+  },
+  "homepage": "http://www.suitjs.com",
+  "dependencies": {
+    
+  },
+  "scripts": {
+    "build-docs":   "jsdoc ./js/reel.doc.js -d docs/deploy/ -t docs/template/ -c docs/template/conf.json -r README.md",
+    "build-js":     "uglifyjs js/reel.doc.js -b -o js/reel.js && uglifyjs js/reel.doc.js -o js/reel.min.js",
+    "build-haxe":   "haxe build.hxml",
+    "serve":        "http-server ./ -p 8081",
+    "build":        "npm run build-docs && npm run build-js"   
+  },
+  "contributors": [
+    "Gustavo Allebrandt <gustavoallebrandt@gmail.com"
+  ]
+}
