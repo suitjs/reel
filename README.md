@@ -28,6 +28,10 @@ It requires **[SuitJS - Servant](https://github.com/suitjs/servant)** to work.
 #### CDN
 * TBD
 
+#### Build
+* Run `npm run init` once
+* `npm run build`
+
 # Usage
 After adding the script tag, the `Reel` global variable will be available.  
  
@@ -47,7 +51,7 @@ anim.oncomplete = function() {
 ```
 
 # Documentation
-For in depth information of the API, visit the **[documentation](http://www.suitjs.com/docs/reel/)**.  
+For in depth information of the API, visit the **[documentation](http://www.suitjs.com/docs/)**.  
 Easing Curves based on **[Robert Penner](http://robertpenner.com/easing/)**'s work.  
 A really good guide on those curves can be found **[here](http://easings.net/)**.
  
