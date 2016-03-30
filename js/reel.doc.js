@@ -23,6 +23,9 @@ var Reel={};
 
 	if(window.Servant==null) { console.error("Reel> Servant framework wasn't found!"); return; }
     
+    //List of supported units.
+    var m_units = ["px","%","em","rem","mm","cm","vw","vh","vmin","vmax","ex","ch","cm","pt","pc"];
+    
      /**
      * Function that transforms the animation progress and eases the rate of change of the animated value.
      * @callback Easing
@@ -78,7 +81,7 @@ var Reel={};
      * var b = document.body;
      * b.style.backgroundColor = "#fff";
      * //Will animate with defaultEasing the 'body' background color during 3s but waiting 1s to start.
-     * Reel.add(b.style,"backgroundColor","#f00",3.0,1.0);
+     * Reel.add(b.style,"backgroundColor","#f00",3.0,1.0,Cubic.out);
 	 */    
 	Reel.add =	
 	function add(p_target,p_property,p_value,p_duration,p_delay,p_easing,p_run_on_background) {  
@@ -103,7 +106,8 @@ var Reel={};
 		if(isString) {
 
 			var v   = vf.toLowerCase();
-			unit    = v.indexOf("px") >= 0 ? "px" : (v.indexOf("%") >= 0 ? "%" : "");
+			unit    = "";
+            for(var i=0;i<m_units.length;i++) { if(v.indexOf(m_units[i])  >= 0) { unit = m_units[i]; break; } }             
 			isColor = (v.indexOf("rgb") >= 0) ? true : false;			
 
 			if(!isColor) {
@@ -151,20 +155,22 @@ var Reel={};
 			}
 			
 			var v1 = null;
+            
+            var r = fn(n.progress);
 			
 			if(isString) {
 
 				if(isColor) {
-
-					c.r = Math.floor(v0.r + (vf.r-v0.r) * fn(n.progress));
-					c.g = Math.floor(v0.g + (vf.g-v0.g) * fn(n.progress));
-					c.b = Math.floor(v0.b + (vf.b-v0.b) * fn(n.progress));
+                                        
+					c.r = Math.floor(v0.r + (vf.r-v0.r) * r);
+					c.g = Math.floor(v0.g + (vf.g-v0.g) * r);
+					c.b = Math.floor(v0.b + (vf.b-v0.b) * r);
 					v1 = "rgb("+c.r+","+c.g+","+c.b+")";
 
 				}
 				else {
 
-					var res = v0 + (vf-v0) * fn(n.progress);
+					var res = v0 + (vf-v0) * r;
 					
 					if(unit!="") res = Math.floor(res);
 
@@ -173,7 +179,7 @@ var Reel={};
 			}
 			else {
 
-				v1 = v0 + (vf-v0) * fn(n.progress);
+				v1 = v0 + (vf-v0) * r;
 
 			}	
 
@@ -261,6 +267,7 @@ var Reel={};
 
 /**
  * Easing Equations by Robert Penner [http://robertpenner.com/easing/]
+ * More information [http://easings.net/]
  */
 
 var PI2     = Math.PI*2.0;

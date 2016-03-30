@@ -11,6 +11,7 @@ var Reel = {};
         console.error("Reel> Servant framework wasn't found!");
         return;
     }
+    var m_units = [ "px", "%", "em", "rem", "mm", "cm", "vw", "vh", "vmin", "vmax", "ex", "ch", "cm", "pt", "pc" ];
     Reel.list = [];
     Reel.defaultDuration = .3;
     Reel.defaultEasing = Linear;
@@ -36,7 +37,13 @@ var Reel = {};
         };
         if (isString) {
             var v = vf.toLowerCase();
-            unit = v.indexOf("px") >= 0 ? "px" : v.indexOf("%") >= 0 ? "%" : "";
+            unit = "";
+            for (var i = 0; i < m_units.length; i++) {
+                if (v.indexOf(m_units[i]) >= 0) {
+                    unit = m_units[i];
+                    break;
+                }
+            }
             isColor = v.indexOf("rgb") >= 0 ? true : false;
             if (!isColor) {
                 if (v.indexOf("#") >= 0) {
@@ -79,19 +86,20 @@ var Reel = {};
                 hasStart = true;
             }
             var v1 = null;
+            var r = fn(n.progress);
             if (isString) {
                 if (isColor) {
-                    c.r = Math.floor(v0.r + (vf.r - v0.r) * fn(n.progress));
-                    c.g = Math.floor(v0.g + (vf.g - v0.g) * fn(n.progress));
-                    c.b = Math.floor(v0.b + (vf.b - v0.b) * fn(n.progress));
+                    c.r = Math.floor(v0.r + (vf.r - v0.r) * r);
+                    c.g = Math.floor(v0.g + (vf.g - v0.g) * r);
+                    c.b = Math.floor(v0.b + (vf.b - v0.b) * r);
                     v1 = "rgb(" + c.r + "," + c.g + "," + c.b + ")";
                 } else {
-                    var res = v0 + (vf - v0) * fn(n.progress);
+                    var res = v0 + (vf - v0) * r;
                     if (unit != "") res = Math.floor(res);
                     v1 = res + "" + unit;
                 }
             } else {
-                v1 = v0 + (vf - v0) * fn(n.progress);
+                v1 = v0 + (vf - v0) * r;
             }
             p_target[p_property] = v1;
             if (n.progress >= 1) {
@@ -282,8 +290,8 @@ var Back = {};
         return (v = v - 1) * v * (2.70158 * v + 1.70158) + 1;
     };
     Back.inout = function(v) {
-        if ((v *= 2) < 1) return .5 * (v * v * (3.5949095 * v - 1.70158));
-        return .5 * ((v -= 2) * v * (3.5949095 * v + 1.70158) + 2);
+        if ((v *= 2) < 1) return .5 * (v * v * (3.5949095 * v - 2.5949095));
+        return .5 * ((v -= 2) * v * (3.5949095 * v + 2.5949095) + 2);
     };
 })();
 

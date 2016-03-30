@@ -7,7 +7,7 @@
   ],
   "description": "Animate your work playing a reel.",
   "main": ["js/reel.js"],
-  "moduleType": [],
+  "moduleType": ["globals"],
   "keywords": [
 	"front-end",
     "haxe",
@@ -38,6 +38,10 @@
     "*.hxproj",
     "*.hxml"		
   ],
+  
+  "dependencies": {
+      "suitjs-servant": ">=1.0.0"
+  },
 
   "license": "MIT"  
 }
