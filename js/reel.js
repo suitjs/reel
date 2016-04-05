@@ -153,90 +153,92 @@ var HalfPI = Math.PI * .5;
 
 var PI = Math.PI;
 
-var Quad = {};
+var Ease = {};
+
+Ease.quad = {};
 
 (function() {
-    Quad.in = function(v) {
+    Ease.quad.in = function(v) {
         return v * v;
     };
-    Quad.out = function(v) {
+    Ease.quad.out = function(v) {
         return -v * (v - 2);
     };
-    Quad.inout = function(v) {
+    Ease.quad.inout = function(v) {
         if ((v *= 2) < 1) return .5 * v * v;
         return -.5 * (--v * (v - 2) - 1);
     };
 })();
 
-var Cubic = {};
+Ease.cubic = {};
 
 (function() {
-    Cubic.in = function(v) {
+    Ease.cubic.in = function(v) {
         return v * v * v;
     };
-    Cubic.out = function(v) {
+    Ease.cubic.out = function(v) {
         return (v = v - 1) * v * v + 1;
     };
-    Cubic.inout = function(v) {
+    Ease.cubic.inout = function(v) {
         if ((v *= 2) < 1) return .5 * v * v * v;
         return .5 * ((v -= 2) * v * v + 2);
     };
 })();
 
-var Quartic = {};
+Ease.quartic = {};
 
 (function() {
-    Quartic.in = function(v) {
+    Ease.quartic.in = function(v) {
         return v * v * v * v;
     };
-    Quartic.out = function(v) {
+    Ease.quartic.out = function(v) {
         return -((v = v - 1) * v * v * v - 1);
     };
-    Quartic.inout = function(v) {
+    Ease.quartic.inout = function(v) {
         if ((v *= 2) < 1) return .5 * v * v * v * v;
         return -.5 * ((v -= 2) * v * v * v - 2);
     };
 })();
 
-var Quintic = {};
+Ease.quintic = {};
 
 (function() {
-    Quintic.in = function(v) {
+    Ease.quintic.in = function(v) {
         return v * v * v * v * v;
     };
-    Quintic.out = function(v) {
+    Ease.quintic.out = function(v) {
         return (v = v - 1) * v * v * v * v + 1;
     };
-    Quintic.inout = function(v) {
+    Ease.quintic.inout = function(v) {
         if ((v *= 2) < 1) return .5 * v * v * v * v * v;
         return .5 * ((v -= 2) * v * v * v * v + 2);
     };
 })();
 
-var Sine = {};
+Ease.sine = {};
 
 (function() {
-    Sine.in = function(v) {
+    Ease.sine.in = function(v) {
         return -Math.cos(v * HalfPI) + 1;
     };
-    Sine.out = function(v) {
+    Ease.sine.out = function(v) {
         return Math.sin(v * HalfPI);
     };
-    Sine.inout = function(v) {
+    Ease.sine.inout = function(v) {
         return -.5 * (Math.cos(PI * v) - 1);
     };
 })();
 
-var Expo = {};
+Ease.expo = {};
 
 (function() {
-    Expo.in = function(v) {
+    Ease.expo.in = function(v) {
         return Math.abs(v) <= 1e-4 ? 0 : Math.pow(2, 10 * (v - 1));
     };
-    Expo.out = function(v) {
+    Ease.expo.out = function(v) {
         return Math.abs(v - 1) <= 1e-4 ? 1 : -Math.pow(2, -10 * v) + 1;
     };
-    Expo.inout = function(v) {
+    Ease.expo.inout = function(v) {
         if (Math.abs(v) <= 1e-4) return 0;
         if (Math.abs(v - 1) <= 1e-4) return 1;
         if ((v *= 2) < 1) return .5 * Math.pow(2, 10 * (v - 1));
@@ -244,35 +246,35 @@ var Expo = {};
     };
 })();
 
-var Circ = {};
+Ease.circ = {};
 
 (function() {
-    Circ.in = function(v) {
+    Ease.circ.in = function(v) {
         return -(Math.sqrt(1 - v * v) - 1);
     };
-    Circ.out = function(v) {
+    Ease.circ.out = function(v) {
         return Math.sqrt(1 - (v = v - 1) * v);
     };
-    Circ.inout = function(v) {
+    Ease.circ.inout = function(v) {
         if ((v *= 2) < 1) return -.5 * (Math.sqrt(1 - v * v) - 1);
         return .5 * (Math.sqrt(1 - (v -= 2) * v) + 1);
     };
 })();
 
-var Elastic = {};
+Ease.elastic = {};
 
 (function() {
-    Elastic.in = function(v) {
+    Ease.elastic.in = function(v) {
         if (Math.abs(v) <= 1e-4) return 0;
         if (Math.abs(v - 1) <= 1e-4) return 1;
         return -(Math.pow(2, 10 * (v -= 1)) * Math.sin((v - .075) * PI2 * 3.3333));
     };
-    Elastic.out = function(v) {
+    Ease.elastic.out = function(v) {
         if (Math.abs(v) <= 1e-4) return 0;
         if (Math.abs(v - 1) <= 1e-4) return 1;
         return Math.pow(2, -10 * v) * Math.sin((v - .075) * PI2 * 3.3333) + 1;
     };
-    Elastic.inout = function(v) {
+    Ease.elastic.inout = function(v) {
         if (Math.abs(v) <= 1e-4) return 0;
         if (Math.abs(v - 1) <= 1e-4) return 1;
         if (v < 1) return -.5 * (Math.pow(2, 10 * (v -= 1)) * Math.sin((v - .1125) * PI2 * 2.2222));
@@ -280,31 +282,31 @@ var Elastic = {};
     };
 })();
 
-var Back = {};
+Ease.back = {};
 
 (function() {
-    Back.in = function(v) {
+    Ease.back.in = function(v) {
         return v * v * (2.70158 * v - 1.70158);
     };
-    Back.out = function(v) {
+    Ease.back.out = function(v) {
         return (v = v - 1) * v * (2.70158 * v + 1.70158) + 1;
     };
-    Back.inout = function(v) {
+    Ease.back.inout = function(v) {
         if ((v *= 2) < 1) return .5 * (v * v * (3.5949095 * v - 2.5949095));
         return .5 * ((v -= 2) * v * (3.5949095 * v + 2.5949095) + 2);
     };
 })();
 
-var Bounce = {};
+Ease.bounce = {};
 
 (function() {
-    Bounce.in = function(v) {
+    Ease.bounce.in = function(v) {
         return 1 - Bounce.out(1 - v);
     };
-    Bounce.out = function(v) {
+    Ease.bounce.out = function(v) {
         if (v < .363636) return 7.5625 * v * v; else if (v < .727272) return 7.5625 * (v -= .545454) * v + .75; else if (v < .90909) return 7.5625 * (v -= .818181) * v + .9375; else return 7.5625 * (v -= .954545) * v + .984375;
     };
-    Bounce.inout = function(v) {
+    Ease.bounce.inout = function(v) {
         if (v < .5) return Bounce.in(v * 2) * .5;
         return Bounce.out(v * 2 - 1) * .5 + .5;
     };
