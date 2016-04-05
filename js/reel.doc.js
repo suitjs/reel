@@ -277,12 +277,16 @@ var PI      = Math.PI;
 /**
  * Container class for all easings.
  * @class
- * @type {Ease};
+ * @namespace
+ * @type {Ease}
  */
 var Ease = {};
 
 /**
  * Quadratic easings.
+ * @type {Quad}
+ * @memberof Ease
+ * @namespace
  */
 Ease.quad = {};
 (function() {
