@@ -283,8 +283,6 @@ var Ease = {};
 
 /**
  * Quadratic easings.
- * @class
- * @type {Quad}
  */
 Ease.quad = {};
 (function() {
