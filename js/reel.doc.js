@@ -291,6 +291,7 @@ Ease.quad = {};
      * Quadratic In.
      * Formula
      * `return x^2;`
+     * @memberof Ease.quad
      */
     Ease.quad.in = function(v) { return v*v; };
     
@@ -298,6 +299,7 @@ Ease.quad = {};
      * Quadratic Out.
      * Formula
      * `return -x*(x-2);`
+     * @memberof Ease.quad
      */
     Ease.quad.out = function(v) { return -v*(v-2); };
     
@@ -308,6 +310,7 @@ Ease.quad = {};
      * if ((x*=2.0) < 1.0) return 0.5*x*x;
 	 * return -0.5 * ((--x)*(x-2.0) - 1.0);
      * ```
+     * @memberof Ease.quad
      */
     Ease.quad.inout = function(v) {   
         if ((v*=2.0) < 1.0) return 0.5*v*v;
