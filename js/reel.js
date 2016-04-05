@@ -1,4 +1,6 @@
-var Linear = function(v) {
+var Ease = {};
+
+Ease.linear = function(v) {
     return v;
 };
 
@@ -14,7 +16,7 @@ var Reel = {};
     var m_units = [ "px", "%", "em", "rem", "mm", "cm", "vw", "vh", "vmin", "vmax", "ex", "ch", "cm", "pt", "pc" ];
     Reel.list = [];
     Reel.defaultDuration = .3;
-    Reel.defaultEasing = Linear;
+    Reel.defaultEasing = Ease.linear;
     Reel.add = function add(p_target, p_property, p_value, p_duration, p_delay, p_easing, p_run_on_background) {
         var a = Servant;
         var dl = p_delay == null ? 0 : p_delay;
@@ -152,8 +154,6 @@ var PI2 = Math.PI * 2;
 var HalfPI = Math.PI * .5;
 
 var PI = Math.PI;
-
-var Ease = {};
 
 Ease.quad = {};
 

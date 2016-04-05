@@ -69,7 +69,7 @@ var Reel={};
      * Default easing when none is specified. Defaults to 'Linear'.
      * @type {Easing}
      */
-	Reel.defaultEasing = Linear;
+	Reel.defaultEasing = Ease.linear;
 
     /**
      * Adds an Animation to the execution loop.
@@ -85,7 +85,7 @@ var Reel={};
      * var b = document.body;
      * b.style.backgroundColor = "#fff";
      * //Will animate with defaultEasing the 'body' background color during 3s but waiting 1s to start.
-     * Reel.add(b.style,"backgroundColor","#f00",3.0,1.0,Cubic.out);
+     * Reel.add(b.style,"backgroundColor","#f00",3.0,1.0,Ease.cubic.out);
 	 */    
 	Reel.add =	
 	function add(p_target,p_property,p_value,p_duration,p_delay,p_easing,p_run_on_background) {  

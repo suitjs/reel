@@ -43,7 +43,7 @@ var b = document.body;
 
 //Animates the 'backgroundColor' property to red during 0.5s waiting 1s to start.
 //Uses the Cubic Out easing.
-var anim = Reel.add(b.style,"backgroundColor","#f00",0.5,1.0,Cubic.out);
+var anim = Reel.add(b.style,"backgroundColor","#f00",0.5,1.0,Ease.cubic.out);
 anim.oncomplete = function() {
     console.log("Finished!");
 };
