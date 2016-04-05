@@ -1,13 +1,17 @@
+/**
+ * Container class for all easings.
+ * @class
+ * @type {Ease}
+ */
+var Ease = {};
 
 /**
  * Linear easing.
- * @class
- * @type {Linear}
  * @description
  * Formula
  * `return x;`
  */
-var Linear = function(v) { return v; }
+Ease.linear = function(v) { return v; }
 
 /**
 * Class that implements the animation/tweening features of SuitJS.
@@ -274,19 +278,11 @@ var PI2     = Math.PI*2.0;
 var HalfPI  = Math.PI*0.5;
 var PI      = Math.PI;
 
-/**
- * Container class for all easings.
- * @class
- * @namespace
- * @type {Ease}
- */
-var Ease = {};
 
 /**
  * Quadratic easings.
+ * @class  
  * @type {Quad}
- * @memberof Ease
- * @namespace
  */
 Ease.quad = {};
 (function() {
@@ -295,8 +291,6 @@ Ease.quad = {};
      * Quadratic In.
      * Formula
      * `return x^2;`
-     * @function
-     * @memberof Ease.quad
      */
     Ease.quad.in = function(v) { return v*v; };
     
@@ -304,8 +298,6 @@ Ease.quad = {};
      * Quadratic Out.
      * Formula
      * `return -x*(x-2);`
-     * @function
-     * @memberof Ease.quad
      */
     Ease.quad.out = function(v) { return -v*(v-2); };
     
@@ -316,8 +308,6 @@ Ease.quad = {};
      * if ((x*=2.0) < 1.0) return 0.5*x*x;
 	 * return -0.5 * ((--x)*(x-2.0) - 1.0);
      * ```
-     * @function
-     * @memberof Ease.quad
      */
     Ease.quad.inout = function(v) {   
         if ((v*=2.0) < 1.0) return 0.5*v*v;
